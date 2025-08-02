@@ -1,7 +1,26 @@
 import {words} from "../../constants/index.js"
 import Button from "../components/Button.js";
 import HeroExperience from "../components/models/hero_models/HeroExperience.tsx";
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
 const Hero = () => {
+  useGSAP(() => {
+    gsap.fromTo(".hero-text",
+      {
+        y:50,
+        opacity:0
+    },
+      {
+        y: 0,
+        opacity:1 ,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.inOut"
+      }
+
+    )
+
+  },[])
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
