@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import LogoSection from './components/LogoSection'
 import FeatureCards from './sections/FeatureCards'
 import Experience from './sections/Experience'
+import TechStack from './sections/TechStack'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
       <LogoSection />
       <FeatureCards />
       <Experience />
+      <TechStack />
     </main>
   )
 }
